@@ -66,7 +66,10 @@ document.firstElementChild.translate="yes"
 document.head.innerHTML += head_append
 var translator_element = document.createElement("div");
 translator_element.id = "google_translate_element"
-document.body.appendChild(translator_element)
+translator_element.style.zIndex = 1
+translator_element.style.position = "absolute"
+translator_element.style.left = "25%"
+document.body.insertBefore(translator_element, document.body.firstElementChild)
 var script = document.createElement("script");
 script.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
 document.getElementsByTagName("head")[0].appendChild(script);
