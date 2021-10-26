@@ -69,4 +69,4 @@ document.getElementsByTagName("head")[0].appendChild(script2);
 function removeTextNode() {
     translator_element.childNodes[0].childNodes[1].remove()
 }
-setTimeout(removeTextNode, 500)
+setTimeout(removeTextNode, 100)
