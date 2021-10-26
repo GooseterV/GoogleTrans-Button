@@ -45,6 +45,9 @@ body>.skiptranslate {
     cursor:pointer !important;
 }
 
+body {
+    top: 0px !important;
+}
 
 
 
