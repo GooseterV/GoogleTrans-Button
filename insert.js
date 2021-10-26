@@ -5,7 +5,9 @@ const head_append = `
 body>.skiptranslate {
     display: none;
 }
-
+.skiptranslate {
+    display: none;
+}
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
