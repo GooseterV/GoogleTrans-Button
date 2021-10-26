@@ -36,6 +36,9 @@ body>.skiptranslate {
     font-family: 'Nunito';
     font-weight: 900;
 }
+.goog-te-gadget > * {
+    left:-50%;
+}
 
 #google_translate_element select {
     outline: none;
@@ -53,10 +56,12 @@ body {
 
 </style>
 `;
-function removeHtmlHeight(){
+function formatPage(){
     document.firstElementChild.style.removeProperty("height")
+    document.body.style.removeProperty("position")
+    document.body.style.removeProperty("top")
 }
-setTimeout(removeHtmlHeight, 250)
+setTimeout(formatPage, 250)
 document.firstElementChild.translate="yes"
 document.head.innerHTML += head_append
 var translator_element = document.createElement("div");
@@ -74,8 +79,6 @@ script2.innerText = `
         }
 `
 document.getElementsByTagName("head")[0].appendChild(script2);
-document.body.style.top="0px";
-console.log(document.body.style.top)
 function translatorRemoveChildNodes(){
     translator_element.childNodes[0].childNodes[1].remove()
 }
