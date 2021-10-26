@@ -10,9 +10,6 @@ body>.skiptranslate {
     display: none !important;
 }
 
-body {
-    top: 0px !important;
-}
 
 @media print {
     #google_translate_element {
@@ -40,11 +37,11 @@ body {
     font-weight: 900;
 }
 
-select {
+#google_translate_element select {
     outline: none;
     border: none;
 }
-select:hover {
+#google_translate_element select:hover {
     cursor:pointer !important;
 }
 
