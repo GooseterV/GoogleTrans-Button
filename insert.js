@@ -44,6 +44,10 @@ body>.skiptranslate {
 #google_translate_element select:hover {
     cursor:pointer !important;
 }
+html {
+    top: 0%;
+}
+
 
 
 </style>
