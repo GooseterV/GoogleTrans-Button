@@ -22,7 +22,7 @@ body>.skiptranslate {
 }
 
 #google_translate_element select {
-    background-color: #9a49aa;
+    background-color: #409ff7;
     color: #000000;
     border: none;
     border-radius: 7px;
