@@ -5,9 +5,7 @@ const head_append = `
 body>.skiptranslate {
     display: none;
 }
-.skiptranslate {
-    display: none;
-}
+
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
@@ -55,7 +53,11 @@ body {
 
 </style>
 `;
-
+function removeHtmlHeight(){
+    document.firstElementChild.style.removeProperty("height")
+}
+setTimeout(removeHtmlHeight, 250)
+document.firstElementChild.translate="yes"
 document.head.innerHTML += head_append
 var translator_element = document.createElement("div");
 translator_element.id = "google_translate_element"
@@ -72,8 +74,10 @@ script2.innerText = `
         }
 `
 document.getElementsByTagName("head")[0].appendChild(script2);
-
-function removeTextNode() {
+document.body.style.top="0px";
+console.log(document.body.style.top)
+function translatorRemoveChildNodes(){
     translator_element.childNodes[0].childNodes[1].remove()
 }
-setTimeout(removeTextNode, 250)
+
+setTimeout(translatorRemoveChildNodes, 250)
