@@ -52,33 +52,28 @@ function formatPage(){
     document.head.innerHTML += headAppend
 }
 setTimeout(formatPage, 250)
-var translator = document.createElement("div");
-function formatTranslator(){
-    translator.id = "google_translate_element"
-    translator.style.zIndex = 20
-    translator.style.position = "absolute"
-    translator.style.left = "25%"
-    document.body.insertBefore(translator, document.body.firstElementChild)
+const translator = document.createElement("div");
+translator.id = "google_translate_element"
+translator.style.zIndex = 20
+translator.style.position = "absolute"
+translator.style.left = "25%"
+document.body.insertBefore(translator, document.body.firstElementChild)
+const translateScript1 = document.createElement("script");
+const translateScript2 = document.createElement("script");
+translateScript1.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+document.getElementsByTagName("head")[0].appendChild(translateScript1);
+translateScript2.innerText = `
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
 }
-setTimeout(formatTranslator, 250)
-var translateScript1 = document.createElement("script");
-var translateScript2 = document.createElement("script");
-function addScripts(){
-    translateScript1.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    document.getElementsByTagName("head")[0].appendChild(translateScript1);
-    translateScript2.innerText = `
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'en'
-        }, 'google_translate_element');
-    }
-    `;
-    document.getElementsByTagName("head")[0].appendChild(translateScript2);
-}
-setTimeout(addScripts, 5000)
+`;
+document.getElementsByTagName("head")[0].appendChild(translateScript2);
+
 
 function translatorRemoveChildNodes(){
     translator.childNodes[0].childNodes[1].remove()
 }
 
-setTimeout(translatorRemoveChildNodes, 5000)
+setTimeout(translatorRemoveChildNodes, 250)
