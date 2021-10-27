@@ -39,6 +39,13 @@ body>.skiptranslate {
 #google_translate_element select:hover {
     cursor:pointer !important;
 }
+#goog-gt-tt[style] {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent;
+    box-shadow: none;
+}
 body {
     top: 0px !important;
 }
