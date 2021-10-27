@@ -75,10 +75,10 @@ function addScripts(){
     `;
     document.getElementsByTagName("head")[0].appendChild(translateScript2);
 }
-setTimeout(addScripts, 250)
+setTimeout(addScripts, 5000)
 
 function translatorRemoveChildNodes(){
     translator.childNodes[0].childNodes[1].remove()
 }
 
-setTimeout(translatorRemoveChildNodes, 500)
+setTimeout(translatorRemoveChildNodes, 5000)
