@@ -61,7 +61,7 @@ function formatPage(){
 setTimeout(formatPage, 250)
 const translator = document.createElement("div");
 translator.id = "google_translate_element"
-translator.style.zIndex = 20
+translator.style.zIndex = 200
 translator.style.position = "absolute"
 translator.style.left = "25%"
 document.body.insertBefore(translator, document.body.firstElementChild)
