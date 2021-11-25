@@ -84,4 +84,5 @@ function translatorRemoveChildNodes(){
 }
 
 setTimeout(translatorRemoveChildNodes, 250)
+alert("Finished loading!")
 console.log(`Finished loading translator  (✿◡‿◡)\nReport Bugs & Issues \n\t↓↓↓\nhttps://github.com/GooseterV/GoogleTrans-Button/issues/new`)
