@@ -20,6 +20,7 @@ javascript:fetch("https://raw.githubusercontent.com/GooseterV/GoogleTrans-Button
 
 
 ~~If you need to bypass this for whatever reason, use this instead~~
-~~```
+
+```
 fetch(atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0dvb3NldGVyVi9Hb29nbGVUcmFucy1CdXR0b24vbWFpbi9pbnNlcnQuanM=")).then((res) => res.text().then((t) => setTimeout(eval(t), 50)))
-```~~
+```
