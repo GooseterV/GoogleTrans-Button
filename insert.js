@@ -67,7 +67,7 @@ translator.style.left = "25%"
 document.body.insertBefore(translator, document.body.firstElementChild)
 const translateScript1 = document.createElement("script");
 const translateScript2 = document.createElement("script");
-translateScript1.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+translateScript1.innerText = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
 document.getElementsByTagName("head")[0].appendChild(translateScript1);
 translateScript2.innerText = `
 function googleTranslateElementInit() {
@@ -83,11 +83,5 @@ function translatorRemoveChildNodes(){
     translator.childNodes[0].childNodes[1].remove()
 }
 
-<<<<<<< HEAD
 setTimeout(translatorRemoveChildNodes, 500)
 console.log(`Finished loading translator  (✿◡‿◡)\nReport Bugs & Issues \n\t↓↓↓\nhttps://github.com/GooseterV/GoogleTrans-Button/issues/new`)
-=======
-setTimeout(translatorRemoveChildNodes, 250)
-alert("Finished loading!")
-console.log(`Finished loading translator  (✿◡‿◡)\nReport Bugs & Issues \n\t↓↓↓\nhttps://github.com/GooseterV/GoogleTrans-Button/issues/new`)
->>>>>>> f9f4eb12c28d31a25ad73f71c965d6c920eaa96a
