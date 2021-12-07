@@ -67,7 +67,7 @@ translator.style.left = "25%"
 document.body.insertBefore(translator, document.body.firstElementChild)
 const translateScript1 = document.createElement("script");
 const translateScript2 = document.createElement("script");
-translateScript1.innerText = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+translateScript1.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
 document.getElementsByTagName("head")[0].appendChild(translateScript1);
 translateScript2.innerText = `
 function googleTranslateElementInit() {
