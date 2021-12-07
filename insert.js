@@ -61,7 +61,7 @@ function formatPage(){
 setTimeout(formatPage, 250)
 const translator = document.createElement("div");
 translator.id = "google_translate_element"
-translator.style.zIndex = 20
+translator.style.zIndex = 200
 translator.style.position = "absolute"
 translator.style.left = "25%"
 document.body.insertBefore(translator, document.body.firstElementChild)
@@ -83,5 +83,11 @@ function translatorRemoveChildNodes(){
     translator.childNodes[0].childNodes[1].remove()
 }
 
+<<<<<<< HEAD
 setTimeout(translatorRemoveChildNodes, 500)
 console.log(`Finished loading translator  (✿◡‿◡)\nReport Bugs & Issues \n\t↓↓↓\nhttps://github.com/GooseterV/GoogleTrans-Button/issues/new`)
+=======
+setTimeout(translatorRemoveChildNodes, 250)
+alert("Finished loading!")
+console.log(`Finished loading translator  (✿◡‿◡)\nReport Bugs & Issues \n\t↓↓↓\nhttps://github.com/GooseterV/GoogleTrans-Button/issues/new`)
+>>>>>>> f9f4eb12c28d31a25ad73f71c965d6c920eaa96a
